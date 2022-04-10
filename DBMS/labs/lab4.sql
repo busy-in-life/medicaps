@@ -1,0 +1,15 @@
+create database college;
+use college;
+create table faculty(Faculty_id varchar(10) primary key, Name char(30), Gender char(1), Age int, Dept varchar(10), Salary float(5, 2), Year_joined year);
+desc faculty;
+insert into faculty values(101, "Rohit Mahajan", "M", 30, "ME", 344.9,'2008');
+insert into faculty values(106, "Monika Jain", "F", 25, "CSE", 548.0,'2009');
+insert into faculty values(102, "Kiran Talwariya", "F", 34, "IT", 783.0,'2012');
+insert into faculty values(110, "Jitendra Sharma", "M", 45, "CE", 993.0,'2005');
+insert into faculty values(107, "Sheetal Agrawal", "F", 40, "AU", 678.0,'2009');
+insert into faculty values(105, "Rahul Sharma", "M", 51, "ME", 693.0,'2010');
+desc faculty;
+select * from faculty;
+select * from faculty where regexp_like(name, '[a-g]');
+select * from faculty where regexp_like(name, '[y-z]');
+select * from faculty where regexp_like(name, '[u-z]');
